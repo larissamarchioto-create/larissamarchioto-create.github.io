@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<title>Larissa Marchioto — CV · Account Supervisor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --wine:#7a2230; --wine-deep:#5d1824; --char:#211d1d; --char-2:#2c2727;
+    --cream:#f5efe7; --gold:#b9883f; --muted:#7c726a; --line:#e4d9cc;
+  }
+  @page{size:A4;margin:0}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:#e9e2d7}
+  body{font-family:'Montserrat',system-ui,sans-serif;color:var(--char-2);font-size:9.4px;line-height:1.5}
+  h1,h2,h3,.serif{font-family:'Fraunces',Georgia,serif}
+  .page{width:210mm;height:297mm;overflow:hidden;margin:0 auto;background:#fff;display:grid;grid-template-columns:64mm 1fr;position:relative}
+
+  /* LANG SWITCH (não imprime) */
+  .lang-switch{position:fixed;top:14px;right:16px;z-index:99;display:flex;gap:4px;background:#fff;border:1px solid var(--line);border-radius:30px;padding:4px;box-shadow:0 8px 24px rgba(33,29,29,.16)}
+  .lang-btn{border:0;cursor:pointer;font-family:'Montserrat';font-weight:800;font-size:11px;letter-spacing:.06em;padding:6px 14px;border-radius:30px;background:transparent;color:var(--muted)}
+  .lang-btn.on{background:var(--wine);color:var(--cream)}
+  @media print{.lang-switch{display:none}}
+
+  /* SIDEBAR */
+  .side{background:var(--wine);color:var(--cream);padding:6.5mm 7mm}
+  .photo{width:25mm;height:25mm;border-radius:50%;overflow:hidden;border:2.5px solid rgba(245,239,231,.35);margin:0 auto 4mm}
+  .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 28%}
+  .side h2{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--cream);font-family:'Montserrat';font-weight:800;margin:2.4mm 0 1.6mm;padding-bottom:1.2mm;border-bottom:1px solid rgba(245,239,231,.25)}
+  .side h2:first-of-type{margin-top:0}
+  .side .item{margin-bottom:1.3mm}
+  .side .item .k{font-size:8px;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);font-weight:700}
+  .side .item .v{font-size:9px;color:var(--cream);word-break:break-word}
+  .side .item a{color:var(--cream);text-decoration:none}
+  .tags{display:flex;flex-wrap:wrap;gap:1.1mm}
+  .tag{font-size:8px;background:rgba(245,239,231,.12);border:1px solid rgba(245,239,231,.22);padding:.9mm 2mm;border-radius:20px;color:var(--cream)}
+  .lang .v small{color:rgba(245,239,231,.7)}
+  .edu .t{font-size:9px;font-weight:700;color:var(--cream)}
+  .edu .s{font-size:8.2px;color:rgba(245,239,231,.75);font-style:italic}
+  .edu div{margin-bottom:1.3mm}
+
+  /* MAIN */
+  .main{padding:9mm 12mm 8mm}
+  .name{font-size:34px;font-weight:600;color:var(--wine);line-height:.98;letter-spacing:-.01em}
+  .name em{font-style:italic;color:var(--gold)}
+  .title{font-family:'Montserrat';font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--char);font-size:10px;margin-top:3mm}
+  .summary{margin-top:4mm;font-size:9.6px;color:var(--char-2);line-height:1.6;text-align:justify}
+  .sec-t{font-family:'Fraunces';font-size:15px;font-weight:600;color:var(--wine-deep);margin:6mm 0 3mm;padding-bottom:1.6mm;border-bottom:2px solid var(--line);position:relative}
+  .sec-t::after{content:"";position:absolute;left:0;bottom:-2px;width:26mm;height:2px;background:var(--gold)}
+  .job{margin-bottom:4.4mm;page-break-inside:avoid}
+  .job .top{display:flex;justify-content:space-between;align-items:baseline;gap:6mm}
+  .job .role{font-weight:800;font-size:10.4px;color:var(--char)}
+  .job .when{font-size:8.4px;font-weight:700;color:var(--gold);white-space:nowrap;letter-spacing:.03em}
+  .job .org{font-weight:600;color:var(--wine);font-size:9.4px;margin:.4mm 0 1.6mm}
+  .job ul{list-style:none;margin-top:1mm}
+  .job li{position:relative;padding-left:4.4mm;margin-bottom:1mm;font-size:9.1px;color:var(--char-2);line-height:1.45}
+  .job li::before{content:"";position:absolute;left:0;top:1.5mm;width:1.6mm;height:1.6mm;background:var(--wine);border-radius:50%}
+  .compact li{margin-bottom:.6mm}
+</style>
+</head>
+<body>
+
+<div class="lang-switch">
+  <button class="lang-btn on" data-l="pt" onclick="setLang('pt')">PT</button>
+  <button class="lang-btn" data-l="en" onclick="setLang('en')">EN</button>
+</div>
+
+<div class="page">
+
+  <!-- SIDEBAR -->
+  <aside class="side">
+    <div class="photo"><img src="assets/larissa-hero.jpg" alt="Larissa Marchioto" /></div>
+
+    <h2 data-pt="Contato" data-en="Contact">Contato</h2>
+    <div class="item"><div class="k" data-pt="Telefone" data-en="Phone">Telefone</div><div class="v">(11) 97481-8142</div></div>
+    <div class="item"><div class="k" data-pt="E-mail" data-en="Email">E-mail</div><div class="v"><a href="mailto:larissamarchioto@gmail.com">larissamarchioto@gmail.com</a></div></div>
+    <div class="item"><div class="k" data-pt="Localização" data-en="Location">Localização</div><div class="v">São Paulo · SP<br><small style="color:rgba(245,239,231,.7)" data-pt="disponível para modelo híbrido" data-en="open to hybrid model">disponível para modelo híbrido</small></div></div>
+    <div class="item"><div class="k">LinkedIn</div><div class="v"><a href="https://www.linkedin.com/in/larissa-marchioto-53166115b/">in/larissa-marchioto</a></div></div>
+    <div class="item"><div class="k">Instagram</div><div class="v"><a href="https://www.instagram.com/larissamarchioto/">@larissamarchioto</a></div></div>
+
+    <h2 data-pt="Idiomas" data-en="Languages">Idiomas</h2>
+    <div class="item lang"><div class="v" data-pt="Português <small>· nativo</small>" data-en="Portuguese <small>· native</small>">Português <small>· nativo</small></div></div>
+    <div class="item lang"><div class="v" data-pt="Inglês <small>· avançado (intercâmbio na Irlanda)</small>" data-en="English <small>· advanced (exchange in Ireland)</small>">Inglês <small>· avançado (intercâmbio na Irlanda)</small></div></div>
+
+    <h2 data-pt="Ferramentas" data-en="Tools">Ferramentas</h2>
+    <div class="tags">
+      <span class="tag">Claude</span><span class="tag">Monday</span><span class="tag">Traackr</span><span class="tag">Sprout Social</span><span class="tag">Google Analytics</span><span class="tag">Vtex</span><span class="tag">Excel / Sheets</span>
+    </div>
+
+    <h2 data-pt="Competências" data-en="Skills">Competências</h2>
+    <div class="tags">
+      <span class="tag" data-pt="Atendimento &amp; gestão de contas" data-en="Account management">Atendimento &amp; gestão de contas</span>
+      <span class="tag" data-pt="Gestão de clientes &amp; influenciadores" data-en="Client &amp; influencer management">Gestão de clientes &amp; influenciadores</span>
+      <span class="tag" data-pt="Gestão de pessoas" data-en="People management">Gestão de pessoas</span>
+      <span class="tag" data-pt="Método ágil" data-en="Agile">Método ágil</span>
+      <span class="tag" data-pt="Automação de processos com IA" data-en="AI process automation">Automação de processos com IA</span>
+      <span class="tag" data-pt="Faturamento &amp; financeiro" data-en="Billing &amp; finance">Faturamento &amp; financeiro</span>
+      <span class="tag" data-pt="Cronogramas &amp; briefing" data-en="Scheduling &amp; briefing">Cronogramas &amp; briefing</span>
+      <span class="tag" data-pt="Reuniões de alinhamento" data-en="Alignment meetings">Reuniões de alinhamento</span>
+      <span class="tag" data-pt="Curadoria de creators" data-en="Creator curation">Curadoria de creators</span>
+      <span class="tag" data-pt="Negociação" data-en="Negotiation">Negociação</span>
+      <span class="tag" data-pt="Qualidade de conteúdo" data-en="Content quality">Qualidade de conteúdo</span>
+      <span class="tag" data-pt="Eventos, ativações &amp; set" data-en="Events, activations &amp; on-set">Eventos, ativações &amp; set</span>
+    </div>
+
+    <h2 data-pt="Formação" data-en="Education">Formação</h2>
+    <div class="edu">
+      <div><div class="t" data-pt="MBA em Inteligência Artificial" data-en="MBA in Artificial Intelligence">MBA em Inteligência Artificial</div><div class="s" data-pt="em andamento" data-en="in progress">em andamento</div></div>
+      <div><div class="t" data-pt="MBM em Gestão de Marketing" data-en="Marketing Management (MBM)">MBM em Gestão de Marketing</div><div class="s">Insper</div></div>
+      <div><div class="t" data-pt="IA para Conteúdo e Estratégia" data-en="AI for Content &amp; Strategy">IA para Conteúdo e Estratégia</div><div class="s" data-pt="Certificação · Human Academy" data-en="Certificate · Human Academy">Certificação · Human Academy</div></div>
+      <div><div class="t" data-pt="Bacharelado em Publicidade e Propaganda" data-en="Bachelor in Advertising">Bacharelado em Publicidade e Propaganda</div><div class="s">Centro Universitário Belas Artes · 2019–2023</div></div>
+      <div><div class="t" data-pt="Inglês Avançado · Intercâmbio" data-en="Advanced English · Study Abroad">Inglês Avançado · Intercâmbio</div><div class="s">Dublin Cultural Institute · 2018</div></div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+    <div class="name">Larissa <em>Marchioto</em></div>
+    <div class="title" data-pt="Account Supervisor · Marketing de Influência" data-en="Account Supervisor · Influencer Marketing">Account Supervisor · Marketing de Influência</div>
+
+    <p class="summary"
+       data-pt="Profissional de marketing de influência com 7 anos de experiência em <strong>atendimento e operação de campanhas em agência</strong>, atuando como ponto de ligação entre clientes, influenciadores, agências parceiras e times internos. Conduzo a campanha em todas as etapas: alinhamentos estratégicos, gestão de cronogramas, faturamento e processos financeiros, curadoria de creators, revisão de qualidade de conteúdo e acompanhamento de sets de filmagem. Formada em Publicidade e Propaganda, com inglês avançado e forte presença em redes sociais (Meta, TikTok, YouTube)."
+       data-en="Influencer marketing professional with 7 years of experience in <strong>agency account service and campaign operations</strong>, acting as the liaison between clients, influencers, partner agencies and internal teams. I lead campaigns across every stage: strategic alignment, schedule management, billing and financial processes, creator curation, content quality review and on-set support during shoots. Degree in Advertising, advanced English and a strong social media presence (Meta, TikTok, YouTube).">Profissional de marketing de influência com 7 anos de experiência em <strong>atendimento e operação de campanhas em agência</strong>, atuando como ponto de ligação entre clientes, influenciadores, agências parceiras e times internos. Conduzo a campanha em todas as etapas: alinhamentos estratégicos, gestão de cronogramas, faturamento e processos financeiros, curadoria de creators, revisão de qualidade de conteúdo e acompanhamento de sets de filmagem. Formada em Publicidade e Propaganda, com inglês avançado e forte presença em redes sociais (Meta, TikTok, YouTube).</p>
+
+    <div class="sec-t" data-pt="Experiência profissional" data-en="Professional experience">Experiência profissional</div>
+
+    <div class="job">
+      <div class="top"><div class="role" data-pt="Gerente de Influência" data-en="Influence Manager">Gerente de Influência</div><div class="when" data-pt="Jun 2026 — atual" data-en="Jun 2026 — present">Jun 2026 — atual</div></div>
+      <div class="org">W3haus</div>
+      <ul>
+        <li data-pt="Liderança da área de marketing de influência da agência, conduzindo estratégia, operação e relacionamento com clientes, influenciadores e times internos." data-en="Leading the agency's influencer marketing area, driving strategy, operations and the relationship with clients, influencers and internal teams.">Liderança da área de marketing de influência da agência, conduzindo estratégia, operação e relacionamento com clientes, influenciadores e times internos.</li>
+        <li data-pt="Gestão de pessoas e de campanhas ponta a ponta, do briefing à entrega, com método ágil e uso de IA na automação de processos." data-en="People management and end-to-end campaign management, from briefing to delivery, using agile methods and AI for process automation.">Gestão de pessoas e de campanhas ponta a ponta, do briefing à entrega, com método ágil e uso de IA na automação de processos.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="top"><div class="role" data-pt="Coordenadora de Influência e Comunidade" data-en="Influence &amp; Community Coordinator">Coordenadora de Influência e Comunidade</div><div class="when" data-pt="Fev 2025 — Jun 2026" data-en="Feb 2025 — Jun 2026">Fev 2025 — Jun 2026</div></div>
+      <div class="org" data-pt="Tastemakers Brasil · conta Dove (Unilever)" data-en="Tastemakers Brasil · Dove account (Unilever)">Tastemakers Brasil · conta Dove (Unilever)</div>
+      <ul>
+        <li data-pt="Ponto focal da conta no relacionamento diário com cliente, influenciadores e times internos, garantindo fluidez na comunicação e nos processos da marca." data-en="Account focal point in daily relationship with the client, influencers and internal teams, ensuring smooth communication and brand processes.">Ponto focal da conta no relacionamento diário com cliente, influenciadores e times internos, garantindo fluidez na comunicação e nos processos da marca.</li>
+        <li data-pt="Captação de briefings junto ao cliente e condução de reuniões de alinhamento estratégico das campanhas de haircare e skincare." data-en="Gathering client briefings and leading strategic alignment meetings for haircare and skincare campaigns.">Captação de briefings junto ao cliente e condução de reuniões de alinhamento estratégico das campanhas de haircare e skincare.</li>
+        <li data-pt="Construção e gestão de cronogramas de campanha, com acompanhamento de faturamento e dos processos financeiros junto aos creators." data-en="Building and managing campaign schedules, following billing and financial processes with creators.">Construção e gestão de cronogramas de campanha, com acompanhamento de faturamento e dos processos financeiros junto aos creators.</li>
+        <li data-pt="Curadoria de creators, revisão da qualidade dos conteúdos e supervisão de ativações e eventos presenciais (ex.: Treinão Salva Cabelos)." data-en="Creator curation, content quality review and oversight of activations and in-person events (e.g., Treinão Salva Cabelos).">Curadoria de creators, revisão da qualidade dos conteúdos e supervisão de ativações e eventos presenciais (ex.: Treinão Salva Cabelos).</li>
+        <li data-pt="Implementação de automações com IA (Claude e outras) em processos e projetos de influência, com método ágil e gestão do time." data-en="Implementation of AI automations (Claude and others) across influence processes and projects, using agile methods and team management.">Implementação de automações com IA (Claude e outras) em processos e projetos de influência, com método ágil e gestão do time.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="top"><div class="role" data-pt="Gestão de Projetos de Marketing de Influência" data-en="Influencer Marketing Project Management">Gestão de Projetos de Marketing de Influência</div><div class="when" data-pt="Out 2023 — Jan 2025" data-en="Oct 2023 — Jan 2025">Out 2023 — Jan 2025</div></div>
+      <div class="org">VML · Visa, L'Oréal Paris, Universal Pictures, Ton, Grupo Petrópolis</div>
+      <ul>
+        <li data-pt="Atendimento e gestão de projetos com influenciadores para grandes contas, fazendo a ponte entre cliente, talentos e equipes criativas." data-en="Account service and project management with influencers for major accounts, bridging client, talent and creative teams.">Atendimento e gestão de projetos com influenciadores para grandes contas, fazendo a ponte entre cliente, talentos e equipes criativas.</li>
+        <li data-pt="Gestão de cronograma, briefing e aprovação de conteúdos, com acompanhamento de contratos, pagamentos e faturamento dos influenciadores." data-en="Schedule, briefing and content approval management, following influencer contracts, payments and billing.">Gestão de cronograma, briefing e aprovação de conteúdos, com acompanhamento de contratos, pagamentos e faturamento dos influenciadores.</li>
+        <li data-pt="Acompanhamento em eventos externos e sets de filmagem / shootings publicitários, assegurando a qualidade da entrega." data-en="Support at external events and film sets / advertising shoots, ensuring delivery quality.">Acompanhamento em eventos externos e sets de filmagem / shootings publicitários, assegurando a qualidade da entrega.</li>
+        <li data-pt="Apoio ao planejamento criativo, estratégia e curadoria de marketing de influência." data-en="Support to creative planning, strategy and influencer marketing curation.">Apoio ao planejamento criativo, estratégia e curadoria de marketing de influência.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="top"><div class="role" data-pt="Líder de Operações de Marketing de Influência" data-en="Influencer Marketing Operations Lead">Líder de Operações de Marketing de Influência</div><div class="when" data-pt="Out 2022 — Out 2023" data-en="Oct 2022 — Oct 2023">Out 2022 — Out 2023</div></div>
+      <div class="org" data-pt="Airfluencers · conta L'Oréal Paris (L'Oréal Brasil)" data-en="Airfluencers · L'Oréal Paris account (L'Oréal Brasil)">Airfluencers · conta L'Oréal Paris (L'Oréal Brasil)</div>
+      <ul>
+        <li data-pt="Operação das campanhas com o time de influenciadores da L'Oréal Paris (skincare, haircare e hair color) e lançamento de maquiagem Carolina Herrera." data-en="Campaign operations with L'Oréal Paris' influencer roster (skincare, haircare and hair color) and the Carolina Herrera makeup launch.">Operação das campanhas com o time de influenciadores da L'Oréal Paris (skincare, haircare e hair color) e lançamento de maquiagem Carolina Herrera.</li>
+        <li data-pt="Gestão de contratos, pagamentos e processos financeiros dos influenciadores." data-en="Management of influencer contracts, payments and financial processes.">Gestão de contratos, pagamentos e processos financeiros dos influenciadores.</li>
+        <li data-pt="Curadoria de creators, apoio ao planejamento de campanhas e aprovação dos conteúdos produzidos." data-en="Creator curation, campaign planning support and approval of produced content.">Curadoria de creators, apoio ao planejamento de campanhas e aprovação dos conteúdos produzidos.</li>
+      </ul>
+    </div>
+
+    <div class="job compact">
+      <div class="top"><div class="role" data-pt="Gestão de Campanhas de Marketing de Influência" data-en="Influencer Marketing Campaign Management">Gestão de Campanhas de Marketing de Influência</div><div class="when" data-pt="Nov 2020 — Out 2022" data-en="Nov 2020 — Oct 2022">Nov 2020 — Out 2022</div></div>
+      <div class="org">Publika Influencers Solutions</div>
+      <ul>
+        <li data-pt="Curadoria de influenciadores a partir de análise detalhada de conteúdo e público; contato, negociação de valores e datas de ativação." data-en="Influencer curation based on detailed content and audience analysis; outreach, fee and activation-date negotiation.">Curadoria de influenciadores a partir de análise detalhada de conteúdo e público; contato, negociação de valores e datas de ativação.</li>
+        <li data-pt="Revisão e envio de contratos, termos e condições; gestão de tempo e cronograma; produção e envio de briefing." data-en="Review and dispatch of contracts, terms and conditions; time and schedule management; briefing production and delivery.">Revisão e envio de contratos, termos e condições; gestão de tempo e cronograma; produção e envio de briefing.</li>
+        <li data-pt="Aprovação de conteúdo, acompanhamento da execução, análise de resultados e acompanhamento do processo financeiro." data-en="Content approval, execution tracking, results analysis and financial process follow-up.">Aprovação de conteúdo, acompanhamento da execução, análise de resultados e acompanhamento do processo financeiro.</li>
+      </ul>
+    </div>
+
+    <div class="job compact">
+      <div class="top"><div class="role" data-pt="Assistente de Marketing e Logística" data-en="Marketing &amp; Logistics Assistant">Assistente de Marketing e Logística</div><div class="when" data-pt="Mar 2019 — Nov 2020" data-en="Mar 2019 — Nov 2020">Mar 2019 — Nov 2020</div></div>
+      <div class="org">Eleve Life</div>
+      <ul>
+        <li data-pt="Análise semanal do e-commerce (Vtex, Google Analytics) e apresentação de resultados à diretoria; criação de briefings para influenciadores." data-en="Weekly e-commerce analysis (Vtex, Google Analytics) and results presentation to leadership; briefing creation for influencers.">Análise semanal do e-commerce (Vtex, Google Analytics) e apresentação de resultados à diretoria; criação de briefings para influenciadores.</li>
+        <li data-pt="Interface com fornecedores e agências, apoio a estratégias sazonais e representação da marca em eventos e feiras." data-en="Interface with suppliers and agencies, support to seasonal strategies and brand representation at events and fairs.">Interface com fornecedores e agências, apoio a estratégias sazonais e representação da marca em eventos e feiras.</li>
+      </ul>
+    </div>
+  </main>
+
+</div>
+
+<script>
+  function setLang(l){
+    document.documentElement.lang = (l==='en') ? 'en' : 'pt-BR';
+    document.querySelectorAll('[data-pt]').forEach(function(el){
+      var val = el.getAttribute('data-'+l);
+      if(val!==null) el.innerHTML = val;
+    });
+    document.querySelectorAll('.lang-btn').forEach(function(b){
+      b.classList.toggle('on', b.getAttribute('data-l')===l);
+    });
+  }
+  (function(){
+    var p = new URLSearchParams(location.search).get('lang');
+    setLang(p==='en' ? 'en' : 'pt');
+  })();
+</script>
+</body>
+</html>
